@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <ul class="tabs__items">
+          <li class="tabs__item tabs__item--active">
+            <a href="#tab1">First tab</a>
+          </li>
+          <li class="tabs__item">
+            <a href="#tab2">Second tab</a>
+          </li>
+          <li class="tabs__item">
+            <a href="#tab3">Third tab</a>
+          </li>
+        </ul>
+        <div class="tabs__cards">
+          <div id="tab1" class="tabs__card tabs__card--active">
+            <h2>First Lorem</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              ut excepturi enim libero nisi ratione, vitae voluptas eveniet
+              error, tempore deleniti iste explicabo. A sequi quod eius quo ipsa
+              veniam.
+            </p>
+          </div>
+          <div id="tab2" class="tabs__card">
+            <h2>Second Lorem</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              ut excepturi enim libero nisi ratione, vitae voluptas eveniet
+              error, tempore deleniti iste explicabo. A sequi quod eius quo ipsa
+              veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Possimus ut excepturi enim libero nisi ratione, vitae voluptas
+              eveniet error, tempore deleniti iste explicabo. A sequi quod eius
+              quo ipsa veniam. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Possimus ut excepturi enim libero nisi ratione,
+              vitae voluptas eveniet error, tempore deleniti iste explicabo. A
+              sequi quod eius quo ipsa veniam.
+            </p>
+          </div>
+          <div id="tab3" class="tabs__card">
+            <h2>Third Lorem</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              ut excepturi enim libero nisi ratione, vitae voluptas eveniet
+              error, tempore deleniti iste explicabo. A sequi quod eius quo ipsa
+              veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Possimus ut excepturi enim libero nisi ratione, vitae voluptas
+              eveniet error, tempore deleniti iste explicabo. A sequi quod eius
+              quo ipsa veniam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const tabs = document.querySelectorAll(".tabs__item");
+      const cards = document.querySelectorAll(".tabs__card");
+
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener("click", function (event) {
+          //tabs
+          for (let k = 0; k < tabs.length; k++) {
+            tabs[k].classList.remove("tabs__item--active");
+          }
+          this.classList.add("tabs__item--active");
+          //cards
+          for (let j = 0; j < cards.length; j++) {
+            cards[j].classList.remove("tabs__card--active");
+          }
+          cards[i].classList.add("tabs__card--active");
+        });
+      }
+    </script>
+  </body>
+</html>
