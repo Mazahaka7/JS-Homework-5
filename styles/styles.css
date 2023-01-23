@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+.tabs{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: bisque;
+    padding: 10px;
+    margin-top: 20px;
+}
+.tabs__items{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    list-style: none;
+    text-transform: uppercase;    
+ }
+ .tabs__item{
+    max-width: 160px;
+    height: 20px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 0 10px;
+    margin-right: 10px;
+ }
+ .tabs__item--active{
+    background-color: aquamarine;
+ }
+ 
+ .tabs__item > a{
+    text-decoration: none;
+    color: black;
+ }
+ /* card content */
+ .tabs__cards{
+    border: 2px solid black;
+ }
+ .tabs__card{
+    display: none;
+ }
+ .tabs__card > p, .tabs__card>h2{
+    color: rgb(26, 59, 106);
+    padding: 10px 10px;
+ }
+ /* .tabs__card:first-child {
+     background-color: aquamarine;
+ }
+ .tabs__card:nth-child(2) {
+     background-color: rgb(185, 228, 75);
+ }
+ .tabs__card:last-child {
+     background-color: bisque;
+ } */
+ /* .tabs__card:target{
+    display: block;
+ } */
+ .tabs__card--active{
+    display: block;
+    background-color: aquamarine;
+ }
